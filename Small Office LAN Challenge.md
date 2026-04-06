@@ -40,13 +40,6 @@ Successful host-to-host communication
 That the switch interfaces are operational
 
 
-## Troubleshooting Challenge
-
-Intentionally introduce a configuration error.
-
-Identify the issue, explain the cause, and resolve the problem while documenting your process.
-
-
 ## Lab
 
 First things first, lets get all of our devices out onto a blank packet tracer canvas
