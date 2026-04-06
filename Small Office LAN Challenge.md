@@ -62,13 +62,13 @@ _SW1_
 <img width="610" height="156" alt="image" src="https://github.com/user-attachments/assets/501ba315-5ef0-4d09-ad55-54a18ce2326a" />
 
 
-Next we need to get the devices connected to the main switch. For that a simple UTP copper straight-through cable can be used. 
+Next we need to get the devices connected to the main switch. For that a simple UTP copper straight-through cable can be used. A straight-through cable will work here are we are going from PC to switch. A crossover cable would be needed if going switch-to-switch.
 
 
 <img width="548" height="367" alt="image" src="https://github.com/user-attachments/assets/5fbab681-8a4e-4cf2-a60d-bb86a7823e1e" />
 
 
-We are now all connected to the switch interfaces
+We are now all connected to the switch interfaces. There is no configuration needed on the switch interfaces themselves as Packet Tracer auto-negotiates duplex and speed, so for simplicities sake we can just allow that to occur.
 
 
 <img width="1346" height="175" alt="image" src="https://github.com/user-attachments/assets/4ac2ee4b-01fa-4fd3-9c4d-a920c30e761b" />
@@ -95,8 +95,7 @@ Now that we are connected to the relevant interfaces on the switch and each devi
 **PC1 Ping to PC2**
 
 
-1. Initial ARP Request goes out to find the MAC address for PC2. The switch has no knowledge of layer 3 addressing therefore it has to operate based off of MAC addresses and ARP is the initial protocol used to find a devices MAC address from its IP address. PC3 will drop the packet as it reads the identified IP and realises it is not them
-
+1. Initial ARP Request goes out to find the MAC address for PC2. The switch, operating at Layer 2, has no knowledge of layer 3 addressing therefore it has to operate based off of MAC addresses and ARP is the initial protocol used to find a devices MAC address from its IP address. In our topology, PC1 sends an ARP request looking for who has PC2's IP address. PC3 will drop the packet as it reads the identified IP and realises it is not them. 
 
 <img width="641" height="441" alt="image" src="https://github.com/user-attachments/assets/37071789-94d1-471b-8d30-efe8d041c429" />
 
@@ -107,7 +106,7 @@ Now that we are connected to the relevant interfaces on the switch and each devi
 <img width="872" height="611" alt="image" src="https://github.com/user-attachments/assets/59e11de7-07e2-4df2-b46d-7fc8aea9dcd7" />
 
 
-3. Now that PC1 knows PC2's MAC address, ICMP traffic can now flow between the devices
+3. Now that PC1 knows PC2's MAC address, ICMP traffic can now flow between the devices with the switch brokering the traffic
 
 
 <img width="697" height="683" alt="image" src="https://github.com/user-attachments/assets/ba92cc98-f0a1-4c2f-a2ec-6a41a84ecc98" />
